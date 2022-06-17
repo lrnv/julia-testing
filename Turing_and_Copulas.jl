@@ -30,4 +30,5 @@ end
 
 sampler = NUTS() # MH() works also.
 chain = sample(copula(draws), sampler, MCMCThreads(), 1_00, 4)
-plot(chain)
+p = plot(chain)
+savefig(p, "plot.png")
